@@ -1,0 +1,267 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=Cp1252" />
+<script src="TS_COMPRA_PKG/report.js" type="text/javascript"></script>
+<link href="TS_COMPRA_PKG/report.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="banner">
+<table width="98%"><tr>
+<td><h2 class="banner">TS_COMPRA_PKG</h2></td>
+</tr></table></div>
+<div id="maintabs">
+<div class="currentmaintab" onclick="onSelectMainTab(this, 0)">
+<div>
+<p>Doc</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 1)">
+<div>
+<p>Details</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 2)">
+<div>
+<p>Grants</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 3)">
+<div>
+<p>References</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 4)">
+<div>
+<p>Dependencies</p>
+</div>
+</div>
+<div class="maintab" onclick="onSelectMainTab(this, 5)">
+<div>
+<p>Code</p>
+</div>
+</div>
+</div>
+<br/>
+<div id="masterreports">
+<div id="Master.0">
+<div class="currentmasterreport">
+<TABLE CELLSPACING="0" CELLPADDING="1" WIDTH="100%" BORDER="0">
+<TR><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2">      SUMMARY:  <A HREF="#field_summary">FIELD</A> | <A HREF="#type_summary">TYPE</A> | <A HREF="#method_summary">METHOD</A></FONT></TD><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2"></TR></TABLE><HR><P></P><HR><P></P><A NAME="method_summary"></A><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="3" BORDER="1"><TR CLASS="TableHeadingColor"><TD COLSPAN="2"><FONT SIZE="+2"><B>Method Summary</B></FONT></TD><TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#generate_random_id">generate_random_id</A></B></CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#generate_rndm_bool">generate_rndm_bool</A></B></CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#generate_rndm_doc">generate_rndm_doc</A></B>( rndm_id_type VARCHAR ) RETURN VARCHAR ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#generate_rndm_local">generate_rndm_local</A></B></CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#generate_rndm_product">generate_rndm_product</A></B></CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#get_entry_date">get_entry_date</A></B>( product_id NUMBER ) RETURN DATE ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#get_product_price">get_product_price</A></B>( p_id_producto NUMBER ) RETURN NUMBER ; </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#get_purchase_id">get_purchase_id</A></B></CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#insert_purchase">insert_purchase</A></B>( purchase_date compra . fecha % TYPE , doc_number compra . documento % TYPE , id_prov proveedor . id_proveedor % TYPE ) </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PROCEDURE</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#insert_purchase_detail">insert_purchase_detail</A></B>( det_purchase_id detalle_compra . compra_id_compra % TYPE , det_purchase_prod detalle_compra . producto_id_producto % TYPE , det_qty detalle_compra . cantidad % TYPE , det_price_ref detalle_compra . precio_compra % TYPE ) </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR CLASS="TableRowColor"><TD WIDTH="1%" VALIGN="top" ALIGN="right"><FONT SIZE="-1"><CODE>&nbsp;</CODE></FONT></TD><TD><CODE><B><A HREF="#insert_units">insert_units</A></B>( serial_number unidad . num_serie % TYPE , product_id unidad . producto_id_producto % TYPE , local_id unidad . local_id_local % TYPE , entry_date unidad . fecha_ingreso % TYPE , availability unidad . disponible % TYPE ) </CODE><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE>
+<P></P><A NAME="method_detail"></A><TABLE WIDTH="100%" CELLSPACING="0" CELLPADDING="3" BORDER="1"><TR CLASS="TableHeadingColor"><TD COLSPAN="2"><FONT SIZE="+2"><B>Method Detail</B></FONT></TD></TABLE><A NAME="generate_random_id"></A>
+<H3>generate_random_id</H3><PRE>          <B>generate_random_id</B></PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="generate_rndm_bool"></A>
+<H3>generate_rndm_bool</H3><PRE>          <B>generate_rndm_bool</B></PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="generate_rndm_doc"></A>
+<H3>generate_rndm_doc</H3><PRE>          <B>generate_rndm_doc</B>( rndm_id_type VARCHAR ) RETURN VARCHAR ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="generate_rndm_local"></A>
+<H3>generate_rndm_local</H3><PRE>          <B>generate_rndm_local</B></PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="generate_rndm_product"></A>
+<H3>generate_rndm_product</H3><PRE>          <B>generate_rndm_product</B></PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="get_entry_date"></A>
+<H3>get_entry_date</H3><PRE>          <B>get_entry_date</B>( product_id NUMBER ) RETURN DATE ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="get_product_price"></A>
+<H3>get_product_price</H3><PRE>          <B>get_product_price</B>( p_id_producto NUMBER ) RETURN NUMBER ; </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="get_purchase_id"></A>
+<H3>get_purchase_id</H3><PRE>          <B>get_purchase_id</B></PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="insert_purchase"></A>
+<H3>insert_purchase</H3><PRE>          <B>insert_purchase</B>( purchase_date compra . fecha % TYPE , doc_number compra . documento % TYPE , id_prov proveedor . id_proveedor % TYPE ) </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PROCEDURE<DD><DL></DL></DD></DL><HR><A NAME="insert_purchase_detail"></A>
+<H3>insert_purchase_detail</H3><PRE>          <B>insert_purchase_detail</B>( det_purchase_id detalle_compra . compra_id_compra % TYPE , det_purchase_prod detalle_compra . producto_id_producto % TYPE , det_qty detalle_compra . cantidad % TYPE , det_price_ref detalle_compra . precio_compra % TYPE ) </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><A NAME="insert_units"></A>
+<H3>insert_units</H3><PRE>          <B>insert_units</B>( serial_number unidad . num_serie % TYPE , product_id unidad . producto_id_producto % TYPE , local_id unidad . local_id_local % TYPE , entry_date unidad . fecha_ingreso % TYPE , availability unidad . disponible % TYPE ) </PRE><DL>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<DD><DL></DL></DD></DL><HR><TABLE CELLSPACING="0" CELLPADDING="1" WIDTH="100%" BORDER="0">
+<TR><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2">      SUMMARY:  <A HREF="#field_summary">FIELD</A> | <A HREF="#type_summary">TYPE</A> | <A HREF="#method_summary">METHOD</A></FONT></TD><TD CLASS="NavBarRow3" VALIGN="top"><FONT SIZE="-2"></TR></TABLE></div>
+</div>
+<div id="Master.1">
+<div class="masterreport">
+<table id="Table.0" cellpadding="0" cellspacing="0" summary="">
+<th>NAME</th>
+<th>VALUE</th>
+</tr>
+<tr>
+<td>OWNER</td>
+<td>TECH_SHOP</td>
+</tr>
+<tr>
+<td>OBJECT_NAME</td>
+<td>TS_COMPRA_PKG</td>
+</tr>
+<tr>
+<td>SUBOBJECT_NAME</td>
+<td>null</td>
+</tr>
+<tr>
+<td>OBJECT_ID</td>
+<td>81148</td>
+</tr>
+<tr>
+<td>DATA_OBJECT_ID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>OBJECT_TYPE</td>
+<td>PACKAGE</td>
+</tr>
+<tr>
+<td>CREATED</td>
+<td>04-DEC-24</td>
+</tr>
+<tr>
+<td>LAST_DDL_TIME</td>
+<td>04-DEC-24</td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>2024-12-04:20:35:23</td>
+</tr>
+<tr>
+<td>STATUS</td>
+<td>VALID</td>
+</tr>
+<tr>
+<td>TEMPORARY</td>
+<td>N</td>
+</tr>
+<tr>
+<td>GENERATED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>SECONDARY</td>
+<td>N</td>
+</tr>
+<tr>
+<td>NAMESPACE</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EDITION_NAME</td>
+<td>null</td>
+</tr>
+<tr>
+<td>SHARING</td>
+<td>NONE</td>
+</tr>
+<tr>
+<td>EDITIONABLE</td>
+<td>N</td>
+</tr>
+<tr>
+<td>ORACLE_MAINTAINED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>APPLICATION</td>
+<td>N</td>
+</tr>
+<tr>
+<td>DEFAULT_COLLATION</td>
+<td>USING_NLS_COMP</td>
+</tr>
+<tr>
+<td>DUPLICATED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>SHARDED</td>
+<td>N</td>
+</tr>
+<tr>
+<td>CREATED_APPID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>CREATED_VSNID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>MODIFIED_APPID</td>
+<td>null</td>
+</tr>
+<tr>
+<td>MODIFIED_VSNID</td>
+<td>null</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.2">
+<div class="masterreport">
+<table id="Table.1" cellpadding="0" cellspacing="0" summary="">
+<tr>
+<th>PRIVILEGE</th>
+<th>GRANTEE</th>
+<th>GRANTABLE</th>
+<th>GRANTOR</th>
+<th>OBJECT_NAME</th>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.3">
+<div class="masterreport">
+<table id="Table.2" cellpadding="0" cellspacing="0" summary="">
+<tr>
+<th>NAME</th>
+<th>OWNER</th>
+<th>TYPE</th>
+<th>OBJECT_ID</th>
+<th>STATUS</th>
+<th>TYPE_LINK</th>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.4">
+<div class="masterreport">
+<table id="Table.3" cellpadding="0" cellspacing="0" summary="">
+<tr>
+<th>NAME</th>
+<th>OWNER</th>
+<th>TYPE</th>
+<th>OBJECT_ID</th>
+<th>STATUS</th>
+<th>TYPE_LINK</th>
+</tr>
+</table>
+</div>
+</div>
+<div id="Master.5">
+<div class="masterreport">
+<pre>
+PACKAGE ts_compra_pkg AS
+	FUNCTION generate_rndm_product RETURN NUMBER;
+	FUNCTION generate_rndm_local RETURN NUMBER;
+	FUNCTION get_product_price(p_id_producto NUMBER) RETURN NUMBER;
+	FUNCTION generate_rndm_doc(rndm_id_type VARCHAR) RETURN VARCHAR;
+	FUNCTION generate_random_id RETURN NUMBER;
+	FUNCTION generate_rndm_bool RETURN VARCHAR;
+	FUNCTION get_purchase_id RETURN NUMBER;
+	FUNCTION get_entry_date(product_id NUMBER) RETURN DATE;
+
+	-- PROCEDURE
+
+	PROCEDURE insert_purchase(
+	    purchase_date compra.fecha%TYPE,
+	    doc_number compra.documento%TYPE,
+	    id_prov proveedor.id_proveedor%TYPE);
+
+	PROCEDURE insert_purchase_detail(
+	    det_purchase_id detalle_compra.compra_id_compra%TYPE,
+	    det_purchase_prod detalle_compra.producto_id_producto%TYPE,
+	    det_qty detalle_compra.cantidad%TYPE,
+	    det_price_ref detalle_compra.precio_compra%TYPE);
+
+	PROCEDURE insert_units(
+	    serial_number unidad.num_serie%TYPE,
+	    product_id unidad.producto_id_producto%TYPE,
+	    local_id unidad.local_id_local%TYPE,
+	    entry_date unidad.fecha_ingreso%TYPE,
+	    availability unidad.disponible%TYPE);
+
+END ts_compra_pkg;</pre>
+</div>
+</div>
+</div>
+</body>
+</html>
